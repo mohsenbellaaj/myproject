@@ -1,0 +1,9 @@
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+# CMD ["npm", "start"]
+# cas de Vite on utilisera à la place la commande dev
+CMD ["npm", "run", "dev"]
